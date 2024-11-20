@@ -25,7 +25,7 @@ jobs:
         api_host: apim.mgmt.apic.fishery.castle.fyre.ibm.com
         platform_api_prefix: platform.mgmt.apic.fishery.castle.fyre.ibm.com 
         provider_org: test
-        api_key: ${{ secrets.apicApikey_participant_12 }}
+        api_key: ${{ secrets.test }}
         api_files: ${{ env.API_FILES }}
         api_folders: ${{ env.API_FOLDERS }}
         PLATFORM_API_PREFIX: true
