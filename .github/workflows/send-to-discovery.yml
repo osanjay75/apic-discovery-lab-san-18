@@ -6,6 +6,8 @@ env:
   API_HOST: us-east-a.apiconnect.automation.ibm.com
   PROVIDER_ORG: api-connect-fo-0
   API_FILES: APIfolder/photos.yaml
+  PLATFORM_API_PREFIX: true
+  INSECURE_SKIP_TLS_VERIFY: true
   #API_FILES: APIfolder/uber-api.json
   #API_FILES: APIfolder/coffee-store.yaml
   #API_FOLDERS: APIfolder,APIfolderTwo
@@ -28,8 +30,6 @@ jobs:
         api_key: ${{ secrets.test }}
         api_files: ${{ env.API_FILES }}
         api_folders: ${{ env.API_FOLDERS }}
-        PLATFORM_API_PREFIX: true
-        INSECURE_SKIP_TLS_VERIFY: true
         resync_check: ${{ true }}
         git_diff: ${{ steps.difference-output.outputs.action_updates }}
         insecure_skip_tls_verify: ${{ env.INSECURE_SKIP_TLS_VERIFY }} 
